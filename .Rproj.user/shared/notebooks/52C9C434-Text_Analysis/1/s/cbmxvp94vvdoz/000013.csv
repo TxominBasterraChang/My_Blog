@@ -1,0 +1,5 @@
+"0","spanish_stop_words <- bind_rows(stop_words,"
+"0","                               data_frame(word = tm::stopwords(""spanish""),"
+"0","                                          lexicon = ""custom"")) %>% filter(lexicon == ""custom"")"
+"2","Warning: `data_frame()` was deprecated in tibble 1.1.0.
+Please use `tibble()` instead."

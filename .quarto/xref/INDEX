@@ -1,0 +1,26 @@
+{
+  "posts/Master_Thesis/Thesis.qmd": {
+    "Thesis.html": "2aaaa9e9"
+  },
+  "posts/post-with-code/index.qmd": {
+    "index.html": "193b8a99"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "8062ce93"
+  },
+  "about.qmd": {
+    "about.html": "cf50bca6"
+  },
+  "posts/Historical_Background/HB.qmd": {
+    "HB.html": "fb975d2f"
+  },
+  "posts/Historical_Background/Untitled.qmd": {
+    "Untitled.html": "24b9770f"
+  },
+  "index.qmd": {
+    "index.html": "0fec1836"
+  },
+  "posts/text_analysis_houses_bizkaia/Text_Analysis.qmd": {
+    "Text_Analysis.html": "00cd378a"
+  }
+}

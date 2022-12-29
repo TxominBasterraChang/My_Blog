@@ -1,0 +1,70 @@
+---
+title: "Text_Analysis"
+---
+
+```{r}
+library(here)
+library(data.table)
+library(grDevices)
+library(wordcloud)
+library(RColorBrewer)
+library(tidyverse)
+library(tidytext)
+```
+
+Nowadays, economic data often contains information in text form. The Spanish Houses dataset from Kagglecontains sales information on Spanish real estate of March 2017. In this exercise, I want to give a brief demonstration of text analysis in R.
+
+The data is coming from the Kaggle data set on [Spanish houses](https://www.kaggle.com/datasets/thedevastator/spanish-housing-dataset-location-size-price-and). I am using the here-package to preserve the folder structure and easily find the files of interest.
+
+```{r}
+i_am("index.qmd")
+load(here("Data", "Data_Frames", "data.Rda"))
+```
+
+Before we start, some cleaning: We are only interested in houses which are located in Bizkaia. Also, we want to restrict the data to houses which are for sale but not for rent.
+
+```{r}
+dim(data %>% filter(is.na(ad_description))) [1] / dim(data) [1]  
+data = data %>% 
+  drop_na(ad_description) %>% 
+  filter(loc_zone != "Álava") %>%
+  filter(loc_city != "Vitoria-Gasteiz") %>%
+  filter(!grepl("Alquiler", house_type)) %>% # Zur Miete
+  filter(room_num != "sin habitación") %>%
+  mutate(room_num = as.numeric(room_num))
+```
+
+The text data can be found under the variable `ad_description`. Using it we can build our `corpus` for analysis. To analyse the occurence frequence of word, each word needs to be assigned a row. This can be done using the function `unnest_tokens()`.
+
+```{r}
+corpus = tibble(line = 1:dim(data) [1], text = data$ad_description)  %>%
+  unnest_tokens(word, text) %>% na.omit()
+```
+
+Naturally, The corpus contains alot of stop words. Stop words like "and", "it", or "this" are are essential, they however do not contain context specific information. Because our corpus is in Spanish, we use the dictionary `tm::stopwords("spanish")` from the `tm` text mining package to load in the beeded stop words. We use `anti_join()` to then delete them from the data.
+
+```{r}
+spanish_stop_words <- bind_rows(stop_words,
+                               tibble(word = tm::stopwords("spanish"),
+                                          lexicon = "custom")) %>% filter(lexicon == "custom")
+
+corpus = corpus %>% anti_join(spanish_stop_words)
+```
+
+Lets have a look at the results: Because there are alot of word frequencies alanysed, we will only plot words which are occuring more than 5000 times.
+
+```{r}
+corpus_freq = corpus %>%
+  count(word, sort = TRUE)
+
+glimpse(corpus_freq)
+```
+
+```{r}
+corpus_freq %>%
+  filter(n > 5000) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL)
+```

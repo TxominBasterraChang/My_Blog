@@ -1,0 +1,7 @@
+"0","corpus %>%"
+"0","  count(word, sort = TRUE) %>%"
+"0","  filter(n > 5000) %>%"
+"0","  mutate(word = reorder(word, n)) %>%"
+"0","  ggplot(aes(n, word)) +"
+"0","  geom_col() +"
+"0","  labs(y = NULL)"

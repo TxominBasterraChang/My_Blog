@@ -1,0 +1,226 @@
+"0","library(markdown)"
+"0","library(knitr)"
+"0","library(readr)"
+"0","library(stringr)"
+"0","library(plyr)"
+"0","library(dplyr)"
+"2","
+Attache Paket: ‘dplyr’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise, summarize
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:stats’:
+
+    filter, lag
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(readxl)"
+"0","library(writexl)"
+"0","library(stringi)"
+"0","library(here)"
+"2","
+Attache Paket: ‘here’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:plyr’:
+
+    here
+
+"
+"0","library(ggplot2)"
+"0","library(haven)"
+"0","library(reshape)"
+"2","
+Attache Paket: ‘reshape’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:dplyr’:
+
+    rename
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:plyr’:
+
+    rename, round_any
+
+"
+"0","library(tidyr)"
+"2","
+Attache Paket: ‘tidyr’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:reshape’:
+
+    expand, smiths
+
+"
+"0","library(janitor)"
+"2","
+Attache Paket: ‘janitor’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:stats’:
+
+    chisq.test, fisher.test
+
+"
+"0","library(fuzzyjoin)"
+"0","library(scales)"
+"2","
+Attache Paket: ‘scales’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:readr’:
+
+    col_factor
+
+"
+"0","library(plm)"
+"2","
+Attache Paket: ‘plm’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:dplyr’:
+
+    between, lag, lead
+
+"
+"0","library(lmtest)"
+"2","Lade nötiges Paket: zoo
+"
+"2","
+Attache Paket: ‘zoo’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:base’:
+
+    as.Date, as.Date.numeric
+
+"
+"0","library(pxR)"
+"2","Lade nötiges Paket: reshape2
+"
+"2","
+Attache Paket: ‘reshape2’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:tidyr’:
+
+    smiths
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:reshape’:
+
+    colsplit, melt, recast
+
+"
+"2","Lade nötiges Paket: RJSONIO
+"
+"0","library(stargazer)"
+"2","
+Please cite as: 
+
+"
+"2"," Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+"
+"2"," R package version 5.2.3. https://CRAN.R-project.org/package=stargazer 
+
+"
+"0","library(clubSandwich)"
+"2","Registered S3 method overwritten by 'clubSandwich':
+  method    from    
+  bread.mlm sandwich
+"
+"0","library(corrplot)"
+"2","corrplot 0.92 loaded
+"
+"0","library(reshape2)"
+"0","library(ggrepel)    "
+"0","library(ggpubr)"
+"2","
+Attache Paket: ‘ggpubr’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:plyr’:
+
+    mutate
+
+"
+"0","library(panelr)"
+"2","Lade nötiges Paket: lme4
+"
+"2","Lade nötiges Paket: Matrix
+"
+"2","
+Attache Paket: ‘Matrix’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:tidyr’:
+
+    expand, pack, unpack
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:reshape’:
+
+    expand
+
+"
+"2","
+Attache Paket: ‘panelr’
+
+"
+"2","Das folgende Objekt ist maskiert ‘package:stats’:
+
+    filter
+
+"
+"0","library(Hmisc)"
+"2","Lade nötiges Paket: lattice
+"
+"2","Lade nötiges Paket: survival
+"
+"2","Lade nötiges Paket: Formula
+"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","
+Attache Paket: ‘Hmisc’
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:dplyr’:
+
+    src, summarize
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:plyr’:
+
+    is.discrete, summarize
+
+"
+"2","Die folgenden Objekte sind maskiert von ‘package:base’:
+
+    format.pval, units
+
+"
+"0","library(hrbrthemes)"
+"2","NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.
+"
+"2","      Please use hrbrthemes::import_roboto_condensed() to install Roboto Condensed and
+"
+"2","      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow
+"

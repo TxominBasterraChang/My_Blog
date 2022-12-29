@@ -1,0 +1,2 @@
+"0","corpus = corpus %>% anti_join(spanish_stop_words)"
+"2","Joining, by = ""word"""
